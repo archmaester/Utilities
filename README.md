@@ -1,12 +1,12 @@
 # Utilities
-Common setup commands
+Common setup commands for Mac users
 
 ## **Utility-1:** Make life easy, use Aliasing
 
 - Save passwords/secrets in a .env file
 
 ```
-export SECRET="YourPassword"
+export SECRET="YourPassword\r"
 ```
 
 - do the following in ~/.bashrc or ~/.bash_profile.
