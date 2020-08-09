@@ -76,7 +76,7 @@ or
 PS1='\u:\W\$ '
 ```
 
-## **Utility-3:** Connect to vpn via terminal (for Mac Users)
+## **Utility-3:** Connect to vpn(using Cisco Anyconnect) via terminal (for Mac Users)
 
 - Create a file secrets.env
 - Add the following lines
