@@ -24,6 +24,7 @@ source $filename.env
 sshTunnel()
 {
 
+	kill $(lsof -t -i:$PORT_NO)
 	expect -c "spawn -ignore HUP ssh -N -L localhost:$PORT_NO:localhost:$PORT_NO username@ip; \
 	expect \"password\";
 	send $SECRET;
