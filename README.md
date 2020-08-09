@@ -29,6 +29,8 @@ sshTunnel()
 	expect \"password\";
 	send $SECRET;
 	exit 0"
+	echo -e "\n"
+	open http://localhost:$PORT_NO
 }
 ```
 
@@ -42,6 +44,7 @@ sshServerA()
 	expect \"password\";
 	send $SECRET;
 	interact"
+	echo -e "\n\n\n"
 }
 ```
 
