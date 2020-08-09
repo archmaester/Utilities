@@ -52,15 +52,21 @@ sshServerA()
 
 - \-ignore HUP runs the process in the background, eliminating the need to maintain a seperate terminal
 - \-ignore HUP is not used in the second script since we want to keep the terminal in interactive mode.
-- **Final Step:** 
+- Create alias 
 
 ```
 alias ssh-serverA=sshServerA
 alias jupyter-serverA=sshTunnel
 ```
-ssh-serverA is now a command just like python, git etc.
+- Run the required command in terminal
 
-### Voila! Life is easier now, isn't it ? 
+```
+> ssh-serverA
+```
+or
+```
+> jupyter-serverA
+```
 
 ## **Utility-2:** Remove long path structure in terminal
 
