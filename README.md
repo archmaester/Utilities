@@ -30,6 +30,7 @@ sshTunnel()
 	send $SECRET;
 	exit 0"
 	echo -e "\n"
+	echo -e "http://localhost:$PORT_NO\n"
 	open http://localhost:$PORT_NO
 }
 ```
