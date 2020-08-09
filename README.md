@@ -117,7 +117,7 @@ For the changes to be effective (one-time)
 ```
 > source ~/.bash_profile
 ```
-
+**Before running the below command, quit/force-quit the UI-application**
 To connect to vpn
 ```
 > connect-vpn
