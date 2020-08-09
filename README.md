@@ -3,7 +3,8 @@ Common setup commands for Mac users
 
 ## **Utility-1:** Make life easy, use Aliasing
 
-- Save passwords/secrets in a .env file
+- Create a file secrets.env
+- Save passwords/secrets in the file
 
 ```
 export SECRET="YourPassword\r"
@@ -12,7 +13,7 @@ export SECRET="YourPassword\r"
 - do the following in ~/.bashrc or ~/.bash_profile.
 
 ```
-source $filename.env
+source secrets.env
 ```
 
 - The passwords/secrets are now exported in the respective environment variables
