@@ -52,5 +52,6 @@ sshServerA()
 alias ssh-serverA=sshServerA
 alias jupyter-serverA=sshTunnel
 ```
+ssh-serverA is now a command just like python, git etc.
 
 # Voila! Life is easier now, isn't it ? 
