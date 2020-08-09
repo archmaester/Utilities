@@ -111,10 +111,15 @@ disconnectVpn()
 }
 alias disconnect-vpn=disconnectVpn
 ```
-- In your terminal, to connect to vpn
+- In your terminal
 
+For the changes to be effective (one-time)
 ```
 > source ~/.bash_profile
+```
+
+To connect to vpn
+```
 > connect-vpn
 ```
 
