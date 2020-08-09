@@ -1,7 +1,7 @@
 # Utilities
 Common setup commands
 
-## Make life easy, use Aliasing
+## **Utility-1:** Make life easy, use Aliasing
 
 - Save passwords/secrets in a .env file
 
@@ -55,4 +55,12 @@ alias jupyter-serverA=sshTunnel
 ```
 ssh-serverA is now a command just like python, git etc.
 
-# Voila! Life is easier now, isn't it ? 
+### Voila! Life is easier now, isn't it ? 
+
+## **Utility-2:** Remove long path structure in terminal
+
+- Add the below line in bash rc to gid rid of the long path in terminal
+
+```
+PS1='\u:\W\$ '
+```
