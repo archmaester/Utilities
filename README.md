@@ -69,7 +69,7 @@ ssh-serverA is now a command just like python, git etc.
 PS1='\u:\W\$ '
 ```
 
-## **Utility-2:** Connect to vpn via terminal (for Mac Users)
+## **Utility-3:** Connect to vpn via terminal (for Mac Users)
 
 - Create a file secrets.env
 - Add the following lines
