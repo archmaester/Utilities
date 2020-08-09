@@ -48,6 +48,4 @@ alias ssh-serverA=sshServerA
 alias jupyter-serverA=sshTunnel
 ```
 
-
-
-
+# Voila! Life is easier now, isn't it ? 
