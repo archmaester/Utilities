@@ -15,7 +15,7 @@ export SECRET="YourPassword"
 source $filename.env
 ```
 
-- The passwords/secrets are now exported in the respective environment variable
+- The passwords/secrets are now exported in the respective environment variables
 - Write a function for the alias command:
 
 **SSH tunnel** (for jupyter, tensorboard)
