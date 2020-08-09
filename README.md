@@ -4,6 +4,11 @@ Common setup commands
 ## Make life easy, use Aliasing
 
 - Save passwords/secrets in a .env file
+
+```
+export SECRET="YourPassword"
+```
+
 - do the following in ~/.bashrc or ~/.bash_profile.
 
 ```
