@@ -68,3 +68,39 @@ ssh-serverA is now a command just like python, git etc.
 ```
 PS1='\u:\W\$ '
 ```
+
+## **Utility-2:** Connect to vpn via terminal (for Mac Users)
+
+- Create a file secrets.env
+- Add the following lines
+
+```
+export EMAIL="Youremail\r\n"
+export PWD="Yourpwd\r\n"
+```
+- In ~/.bash_profile add the following:
+
+```
+source secrets.env
+
+connectVpn()
+
+{
+expect -c "spawn /opt/cisco/anyconnect/bin/vpn connect vpn-address-here; \
+expect \"Username\";
+send $EMAIL;
+expect \"Password\";
+send $PWD;
+interact"
+
+}
+alias connect-vpn=connectVpn
+
+disconnectVpn()
+
+{
+/opt/cisco/anyconnect/bin/vpn disconnect;
+
+}
+alias disconnect-vpn=disconnectVpn
+```
