@@ -130,7 +130,7 @@ To disconnect
 > disconnect-vpn
 ```
 
-## **Utility-4:** RUsing tmux
+## **Utility-4:** Using tmux to manage multiple terminals
 
 - Start a tmux session 
 
