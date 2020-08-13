@@ -1,7 +1,7 @@
 # Utilities
 Common setup commands for Mac users
 
-## **Utility-1:** Make life easy, use Aliasing
+## **Utility-1:** Aliasing
 
 - Create a file secrets.env
 - Save passwords/secrets in the file
@@ -154,6 +154,12 @@ To disconnect
   
   ```
   tmux attach -t 0
+  ```
+- Detach from a session 
+
+  ```
+  1. Ctrl-B
+  2. Type D
   ```
 
 - Giving names to sessions
