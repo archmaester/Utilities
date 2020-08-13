@@ -81,54 +81,57 @@ PS1='\u:\W\$ '
 - Create a file secrets.env
 - Add the following lines
 
-```
-export EMAIL="Youremail\r\n"
-export PWD="Yourpwd\r\n"
-```
+  ```
+  export EMAIL="Youremail\r\n"
+  export PWD="Yourpwd\r\n"
+  ```
+  
 - In ~/.bash_profile add the following:
 
-```
-source secrets.env
+  ```
+  source secrets.env
 
-connectVpn()
+  connectVpn()
+  {
+    expect -c "spawn /opt/cisco/anyconnect/bin/vpn connect vpn-address-here; \
+    expect \"Username\";
+    send $EMAIL;
+    expect \"Password\";
+    send $PWD;
+    interact"
+  }
 
-{
-expect -c "spawn /opt/cisco/anyconnect/bin/vpn connect vpn-address-here; \
-expect \"Username\";
-send $EMAIL;
-expect \"Password\";
-send $PWD;
-interact"
+  alias connect-vpn=connectVpn
 
-}
-alias connect-vpn=connectVpn
-
-disconnectVpn()
-
-{
-/opt/cisco/anyconnect/bin/vpn disconnect;
-
-}
-alias disconnect-vpn=disconnectVpn
-```
+  disconnectVpn()
+  {
+    /opt/cisco/anyconnect/bin/vpn disconnect;
+  }
+  
+  alias disconnect-vpn=disconnectVpn
+  ```
+  
 - In your terminal
 
-For the changes to be effective (one-time)
-```
-> source ~/.bash_profile
-```
+  For the changes to be effective (one-time)
+
+  ```
+  > source ~/.bash_profile
+  ```
+
 **Before running the below command, quit/force-quit the UI-application**
 
-To connect to vpn
-```
-> connect-vpn
-```
+  To connect to vpn
 
-To disconnect
+  ```
+  > connect-vpn
+  ```
 
-```
-> disconnect-vpn
-```
+  To disconnect
+
+  ```
+  > disconnect-vpn
+  ```
 
 ## **Utility-4:** Using tmux to manage multiple terminals
 
