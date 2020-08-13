@@ -129,3 +129,41 @@ To disconnect
 ```
 > disconnect-vpn
 ```
+
+## **Utility-4:** RUsing tmux
+
+- Start a tmux session 
+
+  ```
+  tmux
+  ```
+
+- Close a session
+
+  ```
+  Ctrl-D or Cmd-D or typing exit on terminal
+  ```
+  
+- List sessions
+
+  ```
+  tmux ls
+  ```
+
+- Attach to a session 
+  
+  ```
+  tmux attach -t 0
+  ```
+
+- Giving names to sessions
+
+  ```
+  tmux new -s sessionName
+  ```
+  
+- Rename a session 
+
+  ```
+  tmux rename-session -t oldSessionName newSessionName
+  ```
