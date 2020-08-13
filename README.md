@@ -88,50 +88,50 @@ PS1='\u:\W\$ '
   
 - In ~/.bash_profile add the following:
 
-  ```
-  source secrets.env
+    ```
+    source secrets.env
 
-  connectVpn()
-  {
-    expect -c "spawn /opt/cisco/anyconnect/bin/vpn connect vpn-address-here; \
-    expect \"Username\";
-    send $EMAIL;
-    expect \"Password\";
-    send $PWD;
-    interact"
-  }
+    connectVpn()
+    {
+      expect -c "spawn /opt/cisco/anyconnect/bin/vpn connect vpn-address-here; \
+      expect \"Username\";
+      send $EMAIL;
+      expect \"Password\";
+      send $PWD;
+      interact"
+    }
 
-  alias connect-vpn=connectVpn
+    alias connect-vpn=connectVpn
 
-  disconnectVpn()
-  {
-    /opt/cisco/anyconnect/bin/vpn disconnect;
-  }
+    disconnectVpn()
+    {
+      /opt/cisco/anyconnect/bin/vpn disconnect;
+    }
   
-  alias disconnect-vpn=disconnectVpn
-  ```
+    alias disconnect-vpn=disconnectVpn
+    ```
   
 - In your terminal
 
   For the changes to be effective (one-time)
 
-  ```
-  > source ~/.bash_profile
-  ```
+    ```
+    > source ~/.bash_profile
+    ```
 
-**Before running the below command, quit/force-quit the UI-application**
+  **Before running the below command, quit/force-quit the UI-application**
 
-  To connect to vpn
+    To connect to vpn
 
-  ```
-  > connect-vpn
-  ```
+    ```
+    > connect-vpn
+    ```
 
-  To disconnect
+    To disconnect
 
-  ```
-  > disconnect-vpn
-  ```
+    ```
+    > disconnect-vpn
+    ```
 
 ## **Utility-4:** Using tmux to manage multiple terminals
 
