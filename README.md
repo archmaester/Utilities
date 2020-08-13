@@ -6,24 +6,24 @@ Common setup commands for Mac users
 - Create a file secrets.env
 - Save passwords/secrets in the file
 
-```
-export SECRET="YourPassword\r"
-```
+    ```
+    export SECRET="YourPassword\r"
+    ```
 
 - do the following in ~/.bashrc or ~/.bash_profile.
 
-```
-source secrets.env
-```
+    ```
+    source secrets.env
+    ```
 
 - The passwords/secrets are now exported in the respective environment variables
 - Write a function for the alias command:
 
-**SSH tunnel** (for jupyter, tensorboard)
+  **SSH tunnel** (for jupyter, tensorboard)
 
-```
-sshTunnel()
-{
+    ```
+    sshTunnel()
+    {
 
 	kill $(lsof -t -i:$PORT_NO)
 	expect -c "spawn -ignore HUP ssh -N -L localhost:$PORT_NO:localhost:$PORT_NO username@ip; \
@@ -33,48 +33,50 @@ sshTunnel()
 	echo -e "\n"
 	echo -e "http://localhost:$PORT_NO\n"
 	open http://localhost:$PORT_NO
-}
-```
+    }
+    ```
 
-**SSH connection function**
+    **SSH connection function**
 
-```
-sshServerA()
-{
+    ```
+    sshServerA()
+    {
 
 	expect -c "spawn ssh username@ip; \
 	expect \"password\";
 	send $SECRET;
 	interact"
 	echo -e "\n\n\n"
-}
-```
+    }
+    ```
 
-- \-ignore HUP runs the process in the background, eliminating the need to maintain a seperate terminal
-- \-ignore HUP is not used in the second script since we want to keep the terminal in interactive mode.
+    - \-ignore HUP runs the process in the background, eliminating the need to maintain a seperate terminal
+    - \-ignore HUP is not used in the second script since we want to keep the terminal in interactive mode.
+
 - Create alias 
 
-```
-alias ssh-serverA=sshServerA
-alias jupyter-serverA=sshTunnel
-```
+    ```
+    alias ssh-serverA=sshServerA
+    alias jupyter-serverA=sshTunnel
+    ```
+
 - Run the required command in terminal
 
-```
-> ssh-serverA
-```
-or
-```
-> jupyter-serverA
-```
+    ```
+    > ssh-serverA
+    ```
+    **or** 
+    ```
+    > jupyter-serverA
+    ```
 
 ## **Utility-2:** Remove long path structure in terminal
 
 - Add the below line in bash rc to gid rid of the long path in terminal
 
-```
-PS1='\u:\W\$ '
-```
+    ```
+    PS1='\u:\W\$ '
+    ```
 
 ## **Utility-3:** Connect to vpn(using Cisco Anyconnect) via terminal (for Mac Users)
 
