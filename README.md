@@ -134,6 +134,26 @@ Common setup commands for Mac users
     ```
     > disconnect-vpn
     ```
+    
+  **Check VPN status**
+  ```
+  statusVpn()
+
+  {
+    mystate=$(/opt/cisco/anyconnect/bin/vpn state | grep -c "Connected")
+
+    if [ $mystate -gt 0 ]
+    then
+      echo "VPN is already connected !!!!!"
+      true
+    else
+      echo "VPN is not connected !!!!!"
+      false
+    fi
+  }
+
+  alias check-vpn=statusVpn
+  ```
 
 ## **Utility-4:** Using tmux to manage multiple terminals
 
@@ -179,23 +199,3 @@ Common setup commands for Mac users
   tmux rename-session -t oldSessionName newSessionName
   ```
 
-## **Utility-5:** Check VPN status
-
-  ```
-  statusVpn()
-
-  {
-    mystate=$(/opt/cisco/anyconnect/bin/vpn state | grep -c "Connected")
-
-    if [ $mystate -gt 0 ]
-    then
-      echo "VPN is already connected !!!!!"
-      true
-    else
-      echo "VPN is not connected !!!!!"
-      false
-    fi
-  }
-
-  alias check-vpn=statusVpn
-  ```
