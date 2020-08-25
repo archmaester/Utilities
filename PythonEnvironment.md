@@ -17,14 +17,35 @@
    ```
    curl https://pyenv.run | bash
    ```
- - 
+ - Follow the instructions after installation and restart the terminal
  
+ # Installing python using pyenv
  
- 
+ - List all the available versions of python (Use grep to shorten the list to the ones yuo want to list)
+   ```
+   pyenv install --list 
+   ```
+ - Install the version you want
+   ```
+   pyenv install -v version-name
+   ```
+ - List python versions
+   ```
+   pyenv versions
+   ```
+ - Set python version
+   ```
+   pyenv global version
+   ```
+ - Location of python
+   ```
+   pyenv which python
+   ```
  
  
  
  
  
  ## References
- [Intro to pyenv](https://realpython.com/intro-to-pyenv/)
+ - [Intro to pyenv](https://realpython.com/intro-to-pyenv/)
+ 
