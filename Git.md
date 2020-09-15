@@ -27,6 +27,11 @@
  ```
  git push --force
  ```
-
+ 3. Stash changes
+ ```
+ git stash save
+ git pull
+ git stash pop
+ ```
  
  
