@@ -9,3 +9,7 @@
  ```
  git commit --amend --no-edit
  ```
+ 3. Commit to git when some work is finished
+ ```
+ git commit --amend -m "Implemented xyz"
+ ```
