@@ -13,14 +13,20 @@
  ```
  git commit --amend -m "Implemented xyz"
  ```
-#### Reset to a previous commit 
+#### Basic commands
 
+1. Reset head
  ```
  git reset --hard
  ```
- or 
+   or 
  ```
  git reset --hard HEAD
  ```
+ 2. Force push
+ ```
+ git push --force
+ ```
+
  
  
