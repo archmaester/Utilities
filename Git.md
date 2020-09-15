@@ -13,3 +13,14 @@
  ```
  git commit --amend -m "Implemented xyz"
  ```
+#### Reset to a previous commit 
+
+ ```
+ git reset --hard
+ ```
+ or 
+ ```
+ git reset --hard HEAD
+ ```
+ 
+ 
