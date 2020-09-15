@@ -32,6 +32,8 @@
  git stash save
  git pull
  git stash pop
+ git reset
+ git stash drop
  ```
  
  
