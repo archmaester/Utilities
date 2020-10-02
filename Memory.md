@@ -14,5 +14,13 @@ pip cache purge
 
 ## Free up conda old packages and cache
 ```
+conda clean all
+```
+or 
+```
 conda clean -t
+```
+or 
+```
+conda clean -p
 ```
