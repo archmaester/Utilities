@@ -11,3 +11,8 @@ sudo apt-get clean
 ```
 pip cache purge
 ```
+
+## Free up conda old packages and cache
+```
+conda clean -t
+```
